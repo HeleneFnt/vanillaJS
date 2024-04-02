@@ -1,0 +1,21 @@
+html{
+    font-family: "Meera", sans-serif;
+}
+
+h1 {
+
+    color: rgb(16, 210, 122);
+  }
+
+p {
+
+    color: rgb(16, 210, 194);
+}
+
+body {
+    min-height: 100vh;
+    background: var(--mainColor);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    color: black;
+}
