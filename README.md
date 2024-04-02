@@ -21,7 +21,7 @@ Projet site dynamique avec  des features Javascript
 
 
 **HTML5**, **CSS3** et **JavaScript** pour la structure, le style et l'interactivité.
-Git pour le contrôle de version et la collaboration entre les membres de l'équipe.
+Git pour le contrôle de version.
 GitHub pour le suivi des problèmes, la gestion des versions et la gestion de projet.
 
 
