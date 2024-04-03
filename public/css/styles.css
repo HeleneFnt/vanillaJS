@@ -101,19 +101,33 @@ img {
     width: 300px;
 }
 
+.card_add {
+    background-color: powderblue;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 300px;
+}
+
+/*Taille des images des pokémons pour s'ajuster sur la card*/
 #pokemon_picture {
     max-width: 100%;
 }
 
-/*.menu {*/
-/*    display: none; !* Modification ici *!*/
-/*    position: absolute; !* Ajout de position *!*/
-/*    background-color: lightseagreen; !* Ajout de couleur de fond *!*/
-/*    width: 100%; !* Modification ici *!*/
-/*    list-style: none;*/
-/*    padding: 10px;*/
-/*}*/
+footer{
+    display: flex;
+    justify-content:space-around;
+}
 
-/*.menu li {*/
-/*    margin-bottom: 10px; !* Ajout de marge entre les éléments du menu *!*/
+#pokemonImage {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+}
+
+/*form{*/
+/*    display: flex;*/
+/*    padding: 20px;*/
+
 /*}*/
