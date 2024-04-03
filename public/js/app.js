@@ -17,3 +17,21 @@ for (let i = 0; i < 3; i++) {
         .catch(error => console.error('Erreur lors de la récupération du Pokémon:', error));
 }
 
+/* Afficher le menu dropdown */
+function myFunction() {
+    document.getElementById("toggleMenu").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}

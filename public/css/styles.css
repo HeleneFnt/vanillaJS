@@ -3,12 +3,10 @@ html {
 }
 
 h1 {
-
     color: lightseagreen;
 }
 
 p {
-
     color: lightseagreen;
 }
 
@@ -19,16 +17,83 @@ button {
     border: none;
     border-radius: 0.25rem;
     text-align: center;
+    cursor: pointer;
 }
 
-#pokemon_container{
+nav {
+    background: lightseagreen;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    padding: 10px 20px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    border-radius: 10px;
+}
+
+li.dropdown {
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(16, 210, 204);
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: aquamarine;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+img {
+    max-width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#pokemon_container {
     display: flex;
     justify-content: space-evenly;
     columns: 3;
 }
 
 .card {
-    background-color: rgb(240,248,245);
+    background-color: rgb(240, 248, 245);
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
@@ -36,7 +101,19 @@ button {
     width: 300px;
 }
 
-#pokemon_picture{
+#pokemon_picture {
     max-width: 100%;
-
 }
+
+/*.menu {*/
+/*    display: none; !* Modification ici *!*/
+/*    position: absolute; !* Ajout de position *!*/
+/*    background-color: lightseagreen; !* Ajout de couleur de fond *!*/
+/*    width: 100%; !* Modification ici *!*/
+/*    list-style: none;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.menu li {*/
+/*    margin-bottom: 10px; !* Ajout de marge entre les éléments du menu *!*/
+/*}*/
