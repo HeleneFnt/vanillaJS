@@ -25,11 +25,16 @@
 
     <img src="img/pokeball.png">
 </nav>
-
-<h1>Galerie</h1>
 <div id="button">
+    <button class="mosaic_button" onclick="toggleMosaic()">
+        <img src="img/grille-circulaire.png" alt="Galerie Mosaïque">
+    </button>
+    <button class="column_button" onclick="toggleColumn()">
+        <img src="img/trois-points.png" alt="Galerie en Colonnes">
+    </button>
 
-    <input type="button" onclick='document.location.reload(false)' value="Rafraichir"/>
+</div>
+<h1>Galerie</h1>
 <div id="gallery"></div>
 </body>
 <script src="js/app_gallery.js"></script>

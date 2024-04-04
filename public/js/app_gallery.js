@@ -30,3 +30,13 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=HhaoniENgVaaX3EvcoMPhAzNEorik
         });
     })
     .catch(error => console.error('Erreur lors de la récupération des images de la NASA:', error));
+
+function toggleMosaic() {
+    document.getElementById("gallery").classList.add("mosaic-mode");
+    document.getElementById("gallery").classList.remove("column-mode");
+}
+
+function toggleColumn() {
+    document.getElementById("gallery").classList.remove("mosaic-mode");
+    document.getElementById("gallery").classList.add("column-mode");
+}
