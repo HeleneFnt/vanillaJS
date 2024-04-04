@@ -52,7 +52,7 @@ form.appendChild(nameInput);
 
 const imageInput = document.createElement('input');
 imageInput.type = 'text';
-imageInput.placeholder = 'URL du Pokémon';
+imageInput.placeholder = 'URL du Pokémon'; // https://img-4.linternaute.com/r8EjCC8ozJAzUlArRnxEiHX4yPU=/750x1125/smart/63ec5f73fbff4975a6e42e4ec973fef0/ccmcms-linternaute/animal-etrange-1.jpg
 form.appendChild(imageInput);
 
 const addButton = document.createElement('button');
@@ -63,7 +63,7 @@ form.appendChild(addButton);
 document.body.appendChild(form);
 
 // Écouteur d'événement pour ajouter un Pokémon
-addButton.addEventListener('click', function() {
+addButton.addEventListener('click', function () {
     // Récupération des données du nouveau Pokémon depuis les champs de formulaire
     const category = categoryInput.value;
     const name = nameInput.value;
@@ -74,16 +74,18 @@ addButton.addEventListener('click', function() {
 
     // Affichage du Pokémon dans la console
     console.log('Nouveau Pokémon ajouté :', pokemon);
+
+    // Crée un nouvel élément div pour le Pokémon ajouté
+    let pokemonElement = document.createElement('div');
+    pokemonElement.classList.add('card_add'); // Ajoute la classe 'card' à chaque carte
+    pokemonElement.innerHTML = `
+        <div> Voici votre nouveau Pokemon !</div>
+        <div>Type: ${pokemon.category}</div>
+        <div>Nom: ${pokemon.name}</div>
+        <div><img  class="new-pokemon-image" src="${pokemon.image}" alt="${pokemon.name}"></div>
+    `;
+    document.getElementById("pokemon_container").appendChild(pokemonElement);
 });
-// Crée un nouvel élément div pour le Pokémon ajouté
-let pokemonElement = document.createElement('div');
-pokemonElement.classList.add('card_add');
-pokemonElement.innerHTML = `
-                <div id="pokemon_category">Type: ${pokemonData.category}</div>
-                <div id="pokemon_name">Nom: ${pokemonData.name.fr}</div>
-                <div id="pokemon_image_bloc"><img id="pokemon_picture" src="${pokemonData.sprites.regular}" alt="${pokemonData.name.fr}"></div>
-            `;
-document.getElementById("pokemon_form").appendChild(pokemonElement);
 
 // Fonction pour créer un nouveau Pokémon
 function createPokemon(category, name, image) {

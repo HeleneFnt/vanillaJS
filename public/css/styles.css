@@ -24,8 +24,8 @@ nav {
     background: lightseagreen;
     width: 100%;
     display: flex;
-    align-items:center;
-    justify-content:space-around;
+    align-items: center;
+    justify-content: space-around;
     padding: 10px 20px;
 }
 
@@ -65,7 +65,7 @@ li.dropdown {
     background-color: rgb(16, 210, 204);
     border-radius: 10px;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -76,9 +76,13 @@ li.dropdown {
     border-radius: 10px;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
 
-.show {display:block;}
+.show {
+    display: block;
+}
 
 img {
     max-width: 40px;
@@ -115,9 +119,18 @@ img {
     max-width: 100%;
 }
 
-footer{
+
+/* Styles image du nouveau Pokémon créé*/
+.new-pokemon-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+footer {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
 }
 
 #pokemonImage {
@@ -126,8 +139,4 @@ footer{
     max-width: 50%;
 }
 
-/*form{*/
-/*    display: flex;*/
-/*    padding: 20px;*/
 
-/*}*/
