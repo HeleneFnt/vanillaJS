@@ -18,24 +18,6 @@ for (let i = 0; i < 3; i++) {
         .catch(error => console.error('Erreur lors de la récupération du Pokémon:', error));
 }
 
-/* Afficher le menu dropdown */
-function myFunction() {
-    document.getElementById("toggleMenu").classList.toggle("show");
-}
-
-// Fermer le menu dropdown
-window.onclick = function (e) {
-    if (!e.target.matches('.dropbtn')) {
-
-        let dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let d = 0; d < dropdowns.length; d++) {
-            let openDropdown = dropdowns[d];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
-    }
-}
 
 // Création du formulaire pour ajouter un pokémon
 const form = document.createElement('div');

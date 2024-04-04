@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Accueil Vanilla JS Blog</title>
+    <link rel="stylesheet" href="css/styles_gallery.css">
+    <title>Galerie</title>
 </head>
-
 <body>
 <nav class='dropdown'>
 
@@ -27,29 +26,15 @@
     <img src="img/pokeball.png">
 </nav>
 
-
-<h1>Vanilla JS Blog</h1>
+<h1>Galerie</h1>
 <div id="button">
 
     <input type="button" onclick='document.location.reload(false)' value="Rafraichir"/>
-
-
-    <div class="pokemon_card" id="pokemon_container">
-    </div>
-
-    <div class="pokemon_add" id="pokemon_form">
-
-
-    </div>
-
-
-
-    <footer>
-        <p>Vanilla JS Blog 2024. Tous droits réservés.</p>
-    </footer>
-    <script src="js/app.js"></script>
-    <script src="js/menu.js"></script>
+<div id="gallery"></div>
 </body>
+<script src="js/app_gallery.js"></script>
+<script src="js/menu.js"></script>
+<footer>
+    <p>Vanilla JS Blog 2024. Tous droits réservés.</p>
+</footer>
 </html>
-
-
