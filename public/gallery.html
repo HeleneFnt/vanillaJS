@@ -10,9 +10,7 @@
 </head>
 <body>
 <nav class='dropdown'>
-
     <ul>
-
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Menu</a>
             <div class="dropdown-content" id="toggleMenu">
@@ -22,7 +20,6 @@
             </div>
         </li>
     </ul>
-
     <img src="img/pokeball.png">
 </nav>
 <div id="button">
@@ -32,17 +29,30 @@
     <button class="column_button" onclick="toggleColumn()">
         <img src="img/trois-points.png" alt="Galerie en Colonnes">
     </button>
-
 </div>
 <h1>Galerie</h1>
+<!-- Bouton pour afficher la boîte modale -->
+<button id="toggleAddImgButton" onclick="toggleModal()">
+    <img src="img/plus.png" alt="Boîte modale">
+</button>
+
 <div class="mosaic-mode" id="gallery"></div>
-<h1>Ajouter une image</h1>
-<input type="text" id="titleInput" placeholder="Titre de l'image">
-<input type="text" id="urlInput" placeholder="URL de l'image">
-<button id="addimgButton">Ajouter</button>
+
+<!-- Boîte modale -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="toggleModal()">&times;</span>
+        <h2>Ajouter une image</h2>
+        <input type="text" id="titleInput" placeholder="Titre de l'image">
+        <input type="text" id="urlInput" placeholder="URL de l'image">
+        <button id="addImgButton">Ajouter</button>
+    </div>
+</div>
+
 </body>
 <script src="js/app_gallery.js"></script>
 <script src="js/menu.js"></script>
+
 <footer>
     <p>Vanilla JS Blog 2024. Tous droits réservés.</p>
 </footer>

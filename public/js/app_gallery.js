@@ -36,11 +36,11 @@ function toggleColumn() {
 
 // Ajouter une nouvelle image
 
-const addimgButton = document.getElementById('addimgButton');
+const addImgButton = document.getElementById('addImgButton');
 const titleInput = document.getElementById('titleInput');
 const urlInput = document.getElementById('urlInput');
 
-addimgButton.addEventListener('click', function () {
+addImgButton.addEventListener('click', function () {
     const title = titleInput.value;
     const url = urlInput.value;
 
@@ -63,3 +63,13 @@ addimgButton.addEventListener('click', function () {
 
     console.log('Nouvelle image ajoutée :', newImg);
 });
+
+// Fonction pour afficher ou masquer la boîte modale
+function toggleModal() {
+    const modal = document.getElementById("myModal");
+    if (modal.style.display === "none" || modal.style.display === "") {
+        modal.style.display = "block";
+    } else {
+        modal.style.display = "none";
+    }
+}
