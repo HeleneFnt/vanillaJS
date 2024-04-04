@@ -134,3 +134,16 @@ img{
     max-height: 40px;
 
 }
+.added-image {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px 0 rgba(0,0,0,0.5);
+}
+
+.image-title {
+    display: flex;
+    color: darkblue;
+    text-align: center;
+
+}
