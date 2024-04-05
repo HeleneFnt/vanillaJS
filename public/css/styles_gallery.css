@@ -162,12 +162,11 @@ img:hover {
     object-fit: cover;
     margin: auto;
 }
-
-img{
+#icon{
     max-width: 40px;
     max-height: 40px;
-
 }
+
 .added-image {
     max-width: 500px;
     max-height: 500px;
@@ -217,6 +216,44 @@ img{
     text-decoration: none;
     cursor: pointer;
 }
+
+/* Bannière*/
+.banner {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.carousel {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.slide.active {
+    opacity: 1;
+}
+
 
 /* footer */
 footer {
