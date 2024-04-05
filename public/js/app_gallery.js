@@ -44,6 +44,9 @@ addImgButton.addEventListener('click', function () {
     const title = titleInput.value;
     const url = urlInput.value;
 
+    const container = document.createElement('div');
+    container.classList.add('gallery-item');
+
     const newImg = document.createElement('img');
     newImg.src = url;
     newImg.alt = title;
@@ -53,10 +56,20 @@ addImgButton.addEventListener('click', function () {
     titleElement.textContent = title;
     titleElement.classList.add('image-title');
 
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'X';
+    deleteButton.classList.add('delete-button');
+    deleteButton.addEventListener('click', function () {
+        container.remove();
+    });
+
+    container.appendChild(deleteButton);
+    container.appendChild(newImg);
+    container.appendChild(titleElement);
+
 
     const galleryElement = document.getElementById('gallery');
-    galleryElement.appendChild(newImg);
-    galleryElement.appendChild(titleElement);
+    galleryElement.appendChild(container);
 
     titleInput.value = '';
     urlInput.value = '';

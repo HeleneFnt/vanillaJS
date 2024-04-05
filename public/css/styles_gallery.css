@@ -27,6 +27,21 @@ button {
     cursor: pointer;
 }
 
+/* Delete photo button */
+.delete-button {
+    margin-left: 250px;
+    margin-bottom: 10px;
+    background-color:red;
+    text-align: center;
+    font-weight: bold;
+    color: aquamarine;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 nav {
     background: lightseagreen;
     width: 100%;
