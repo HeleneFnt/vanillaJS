@@ -62,6 +62,7 @@ addButton.addEventListener('click', function () {
     let pokemonElement = document.createElement('div');
     pokemonElement.classList.add('card_add'); // Ajoute la classe 'card' à chaque carte
     pokemonElement.innerHTML = `
+        <button class="delete_button" onclick="deleteCard(event)">X</button>
         <div> Voici votre nouveau Pokemon !</div>
         <div>Type: ${pokemon.category}</div>
         <div>Nom: ${pokemon.name}</div>
@@ -78,3 +79,10 @@ function createPokemon(category, name, image) {
         image: image
     };
 }
+
+// Fonction pour supprimer le Pokémon crée
+function deleteCard(event) {
+    const cardToRemove = event.target.closest('.card_add');
+    cardToRemove.remove();
+}
+

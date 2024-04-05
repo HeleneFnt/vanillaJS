@@ -32,6 +32,22 @@ button {
     text-align: center;
     cursor: pointer;
 }
+
+
+/* Delete pokemon button*/
+.delete_button{
+    margin-left: 250px;
+    background-color:red;
+    text-align: center;
+    font-weight: bold;
+    color: aquamarine;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 /* Nav bar*/
 nav {
     background: lightseagreen;
@@ -158,8 +174,14 @@ nav img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
     padding: 20px;
-    width: 300px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 
 #pokemon_picture {
     max-width: 100%;
@@ -167,15 +189,15 @@ nav img {
 
 
 .new-pokemon-image {
-    max-width: 100%;
-    height: auto;
+    max-width: 60%;
+    display: flex;
+    justify-content: center;
     border-radius: 8px;
 }
 
 #pokemonImage {
-    display: flex;
-    justify-content: center;
-    max-width: 50%;
+    max-width: 100%;
+
 }
 
 /* Footer */
