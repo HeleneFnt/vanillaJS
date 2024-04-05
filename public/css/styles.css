@@ -1,25 +1,38 @@
+/* Général */
 html {
     font-family: "Meera", sans-serif;
+    background-color: lightcyan;
+}
+body{
+    margin:0px;
 }
 
 h1 {
     color: lightseagreen;
+    text-align:center;
 }
 
 p {
-    color: lightseagreen;
+    color:lightseagreen;
+}
+img:hover {
+    transform:scale(1.2);
 }
 
+/* Bouton refresh*/
 input[type="button"],
 button {
-    color: lightseagreen;
+    margin: 5px;
+    margin-left: 40px;
+    background-color: lightseagreen;
+    color: aquamarine;
     padding: 0.25rem;
     border: none;
     border-radius: 0.25rem;
     text-align: center;
     cursor: pointer;
 }
-
+/* Nav bar*/
 nav {
     background: lightseagreen;
     width: 100%;
@@ -90,6 +103,40 @@ nav img {
     cursor: pointer;
 }
 
+/* Formulaire ajout Pokemon */
+#pokemon_form{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: powderblue;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin-bottom: 60px;
+}
+
+#pokemon_form input,
+#pokemon_form button {
+    display: block;
+    margin: 15px auto;
+}
+
+#pokemon_form button {
+    background-color: lightseagreen;
+    color: aquamarine;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#pokemon_form button:hover {
+    background-color: white;
+    color : aquamarine;
+}
+
+/* Cartes Pokemon */
 #pokemon_container {
     display: flex;
     justify-content: space-evenly;
@@ -102,7 +149,7 @@ nav img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
     padding: 20px;
-    width: 300px;
+    width: 280px;
 }
 
 .card_add {
@@ -114,23 +161,15 @@ nav img {
     width: 300px;
 }
 
-/*Taille des images des pokémons pour s'ajuster sur la card*/
 #pokemon_picture {
     max-width: 100%;
 }
 
 
-/* Styles image du nouveau Pokémon créé*/
 .new-pokemon-image {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-
-}
-
-footer {
-    display: flex;
-    justify-content: space-around;
 }
 
 #pokemonImage {
@@ -139,4 +178,14 @@ footer {
     max-width: 50%;
 }
 
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(157, 199, 198, 0.35);
+    padding: 10px;
+    text-align: center;
+}
 

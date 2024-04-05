@@ -1,9 +1,14 @@
+/* Général */
 html {
     font-family: "Meera", sans-serif;
+    background-color: lightcyan;
 }
-
+body{
+    margin:0px;
+}
 h1 {
     color: lightseagreen;
+    text-align:center;
 }
 
 p {
@@ -12,6 +17,8 @@ p {
 
 input[type="button"],
 button {
+    margin-top: 20px;
+    margin-left: 30px;
     color: lightseagreen;
     padding: 0.25rem;
     border: none;
@@ -91,9 +98,21 @@ nav img {
     cursor: pointer;
 }
 
+.mosaic_button, .column_button {
+    margin-bottom: 20px;
+    margin-left: 30 px;
+    color: lightseagreen;
+    padding: 0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    text-align: center;
+    cursor: pointer;
+}
 
 
+/* Galerie*/
 #gallery{
+    margin: 20px 20px 100px 20px;
     max-width: 100%;
     max-height: 100%;
     border-radius: 10px;
@@ -148,7 +167,7 @@ img{
 
 }
 
-/* CSS pour la boîte modale */
+/* Boîte modale */
 .modal {
     display: none;
     position: fixed;
@@ -161,11 +180,12 @@ img{
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: rgb(240, 248, 245);
+    color: lightseagreen;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 50%;
+    width: 20%;
     border-radius: 10px;
 }
 
@@ -183,7 +203,13 @@ img{
     cursor: pointer;
 }
 
+/* footer */
 footer {
-    display: flex;
-    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(157, 199, 198, 0.35);
+    padding: 10px;
+    text-align: center;
 }

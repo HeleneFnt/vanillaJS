@@ -21,6 +21,7 @@ for (let i = 0; i < 3; i++) {
 
 // Création du formulaire pour ajouter un pokémon
 const form = document.createElement('div');
+form.id = 'pokemon_form';
 
 const categoryInput = document.createElement('input');
 categoryInput.type = 'text';
