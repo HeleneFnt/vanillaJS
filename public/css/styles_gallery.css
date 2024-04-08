@@ -15,6 +15,11 @@ p {
     color: lightseagreen;
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
 input[type="button"],
 button {
     margin-top: 20px;
@@ -218,8 +223,6 @@ img:hover {
 }
 
 /* Bannière*/
-
-
 .slider {
     position: relative;
     width: 100vw;
@@ -257,10 +260,6 @@ img:hover {
     transform: translate(100%, 0);
 }
 
-/*.slide {*/
-/*    background: lightseagreen;*/
-/*    color: white;*/
-/*}*/
 
 /*button {*/
 /*    margin-top: 20px;*/

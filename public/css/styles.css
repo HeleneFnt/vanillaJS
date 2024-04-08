@@ -19,6 +19,11 @@ img:hover {
     transform:scale(1.2);
 }
 
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
 /* Bouton refresh*/
 input[type="button"],
 button {
