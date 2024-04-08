@@ -3,6 +3,7 @@ function myFunction() {
     document.getElementById("toggleMenu").classList.toggle("show");
 }
 
+
 // Fermer le menu dropdown
 window.onclick = function (e) {
     if (!e.target.matches('.dropbtn')) {
