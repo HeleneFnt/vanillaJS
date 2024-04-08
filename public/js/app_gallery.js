@@ -1,58 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Création des éléments pour la bannière
-    let banner = document.createElement('div');
-    banner.classList.add('banner');
-
-    let carousel = document.createElement('div');
-    carousel.classList.add('carousel');
-    carousel.textContent = 'Carousel';
-
-    let slide1 = document.createElement('div');
-    slide1.classList.add('slide', 'active'); // Ajout de la classe active à la première diapositive
-    let img1 = document.createElement('img');
-    img1.classList.add('slide-image');
-    img1.src = 'https://www.gurumed.org/wp-content/uploads/2018/02/Space-X-Elon-Musk-Tesla-MARS.jpg';
-    img1.alt = 'slide1';
-    slide1.appendChild(img1);
-
-    let slide2 = document.createElement('div');
-    slide2.classList.add('slide');
-    let img2 = document.createElement('img');
-    img2.classList.add('slide-image');
-    img2.src = 'https://thelastdriverlicenseholder.files.wordpress.com/2018/02/tesla_starman_08.png';
-    img2.alt = 'slide2';
-    slide2.appendChild(img2);
-
-    let slide3 = document.createElement('div');
-    slide3.classList.add('slide');
-    let img3 = document.createElement('img');
-    img3.classList.add('slide-image');
-    img3.src = 'https://cdn.dribbble.com/users/1789431/screenshots/6667477/tesla_space_nobokeh1920.jpg';
-    img3.alt = 'slide3';
-    slide3.appendChild(img3);
-
-    banner.appendChild(carousel);
-    banner.appendChild(slide1);
-    banner.appendChild(slide2);
-    banner.appendChild(slide3);
-
-    // Ajouter la bannière au conteneur
-    document.getElementById('slider_container').appendChild(banner);
-
-    // Carrousel automatique
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-
-    function nextSlide() {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add('active');
-    }
-
-    setInterval(nextSlide, 3000); // Change de diapositive toutes les 3 secondes
-});
-
-
 fetch("https://api.nasa.gov/planetary/apod?api_key=HhaoniENgVaaX3EvcoMPhAzNEorik1x1UGVY2o8d&count=20")
     .then(response => response.json())
     .then(data => {
@@ -141,3 +86,94 @@ function toggleModal() {
         modal.style.display = "none";
     }
 }
+
+
+// Carousel
+let sliderContainer = document.createElement('div');
+sliderContainer.classList.add('slider');
+
+let slide1 = document.createElement('div');
+slide1.classList.add('slide', 'active'); // Ajout de la classe active à la première diapositive
+let img1 = document.createElement('img');
+img1.classList.add('slide-image');
+img1.src = 'img/Bandeau LN Gattaca.png';
+img1.alt = 'slide1';
+slide1.appendChild(img1);
+
+let slide2 = document.createElement('div');
+slide2.classList.add('slide');
+let img2 = document.createElement('img');
+img2.classList.add('slide-image');
+img2.src = 'img/Bandeau LN Fhloston Paradise.png';
+img2.alt = 'slide2';
+slide2.appendChild(img2);
+
+let slide3 = document.createElement('div');
+slide3.classList.add('slide');
+let img3 = document.createElement('img');
+img3.classList.add('slide-image');
+img3.src = 'img/Bandeau LN Tesla.png';
+img3.alt = 'slide3';
+slide3.appendChild(img3);
+
+// Ajouter les diapositives au conteneur du carousel
+sliderContainer.appendChild(slide1);
+sliderContainer.appendChild(slide2);
+sliderContainer.appendChild(slide3);
+
+// Ajouter le conteneur du carousel au début du corps du document
+document.body.insertBefore(sliderContainer, document.body.firstChild);
+
+// // Création des boutons de contrôle
+// let prevBtn = document.createElement('button');
+// prevBtn.textContent = 'Previous';
+// prevBtn.classList.add('btn');
+// prevBtn.id = 'prev';
+//
+// let nextBtn = document.createElement('button');
+// nextBtn.textContent = 'Next';
+// nextBtn.classList.add('btn');
+// nextBtn.id = 'next';
+//
+// // Ajouter les boutons de contrôle au document
+// document.body.insertBefore(prevBtn, sliderContainer.nextSibling);
+// document.body.insertBefore(nextBtn, sliderContainer.nextSibling);
+
+// Ajouter le gestionnaire d'événements pour le carousel
+function slider() {
+    let slides = document.querySelectorAll(".slide"),
+        slider = document.querySelector(".slider"),
+        last = slider.lastElementChild,
+        first = slider.firstElementChild,
+        btn = document.querySelectorAll(".btn");
+
+    slider.insertBefore(last, first);
+
+    btn.forEach(btn => {
+        btn.addEventListener("click", movement);
+    });
+
+    setInterval(function () {
+        movement({ target: { id: "next" } });
+    }, 3000);
+
+    function movement(e) {
+        slider = document.querySelector(".slider");
+        last = slider.lastElementChild;
+        first = slider.firstElementChild;
+
+        const activeSlide = document.querySelector(".active");
+
+        if (e.target.id === "next") {
+            slider.insertBefore(first, last.nextSibling);
+
+            activeSlide.classList.remove("active");
+            activeSlide.nextElementSibling.classList.add("active");
+        } else {
+            slider.insertBefore(last, first);
+            activeSlide.classList.remove("active");
+            activeSlide.previousElementSibling.classList.add("active");
+        }
+    }
+}
+slider();
