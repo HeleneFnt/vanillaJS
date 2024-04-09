@@ -1,17 +1,6 @@
 let playerScore = 0;
 let computerScore = 0;
 
-
-function getPlayerChoice(playerInput) {
-    playerInput = playerInput.toLowerCase();
-    if (playerInput === 'rock' || playerInput === 'paper' || playerInput === 'scissors' || playerInput === 'bomb') {
-        return playerInput;
-    } else {
-        console.log("Erreur! Veuillez choisir entre 'rock', 'paper', 'scissors' ou 'bomb'.");
-        return null;
-    }
-}
-
 function getComputerChoice() {
     let computerInput = Math.floor(Math.random() * 3);
     if (computerInput === 0) {
@@ -40,27 +29,24 @@ function findWinner(playerChoice, computerChoice) {
 }
 
 function updateScore() {
-    document.getElementById('player-score').innerText = "Player score: " + playerScore;
-    document.getElementById('computer-score').innerText = "Computer score: " + computerScore;
+    document.getElementById('player-score').innerText = "Votre score: " + playerScore;
+    document.getElementById('computer-score').innerText = "Score de l'ordinateur: " + computerScore;
 }
 
-function playGame() {
-    const uChoice = getPlayerChoice(prompt("Votre choix ('rock', 'paper' ou 'scissors') ?"));
-        if (uChoice === null) {
-        return ; // Quitte la fonction si le choix du joueur est invalide
-    }
+function playGame(playerChoice) {
     const computerChoice = getComputerChoice();
-    let whoWin =  findWinner(uChoice, computerChoice);
+    let whoWin = findWinner(playerChoice, computerChoice);
 
-    console.log("Player choice:", uChoice);
+
+    console.log("Player choice:", playerChoice);
     console.log("Computer choice:", computerChoice);
-    console.log("Result:"+ whoWin);
+    console.log("Result:", whoWin);
 
-    // Affichage du résultat dans le document
+    // Affichage du résultat
     let chifoumiContainer = document.createElement('div');
     chifoumiContainer.classList.add('chifoumi');
     chifoumiContainer.innerHTML = `
-        <p>Player choice: ${uChoice}</p>
+        <p>Player choice: ${playerChoice}</p>
         <p>Computer choice: ${computerChoice}</p>
         <p>Result: ${whoWin}</p>
         <button id="replay-button">Rejouer</button>
@@ -75,9 +61,13 @@ function playGame() {
     // Gestion du bouton Rejouer
     document.getElementById('replay-button').addEventListener('click', () => {
         chifoumiContainer.remove(); // Supprime l'affichage précédent
-        playGame(); // Relance le jeu
+        playerScore = 0; // Réinitialisation des scores
+        computerScore = 0;
+        updateScore();
     });
 }
 
-// Ajout d'un écouteur d'événement pour le bouton de démarrage du jeu
-document.getElementById('start-game-button').addEventListener('click', playGame);
+// Gestion des clics sur les boutons de choix
+document.getElementById('rock-button').addEventListener('click', () => playGame('rock'));
+document.getElementById('paper-button').addEventListener('click', () => playGame('paper'));
+document.getElementById('scissors-button').addEventListener('click', () => playGame('scissors'));
